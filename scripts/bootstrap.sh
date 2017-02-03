@@ -9,3 +9,4 @@ cd singularity
 ./configure --prefix=/usr/local
 make
 sudo make install
+
