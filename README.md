@@ -1,4 +1,4 @@
-# vagrant-singularity
+# vagrant-ubuntu-singularity
 
 Vagrant project to spin up a virtual machine where you can try out Singularity.
 
