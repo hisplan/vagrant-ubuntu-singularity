@@ -32,10 +32,3 @@ $ singularity
 ## Notes
 
 - The VM will have Ubuntu Trusty (64bit).
-
-## References
-
-
-```bash
-sudo singularity import analysis.img docker://ubuntu:latest
-```
