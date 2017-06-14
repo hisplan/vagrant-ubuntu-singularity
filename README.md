@@ -1,6 +1,6 @@
 # vagrant-ubuntu-singularity
 
-Vagrant project to spin up a virtual machine where you can try out Singularity.
+Vagrant project to spin up a virtual machine where you can try out Singularity version 2.3.
 
 ## Prerequisites
 
@@ -33,7 +33,8 @@ $ vagrant ssh
 Run Singularity:
 
 ```bash
-$ singularity
+$ singularity --version
+2.3-dist
 ```
 
 ## Notes

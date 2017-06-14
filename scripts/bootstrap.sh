@@ -1,12 +1,19 @@
 #!/bin/bash
 
-sudo apt-get update   
-sudo apt-get -y install build-essential curl git sudo man vim autoconf automake libtool debootstrap
+SINGULARITY_VERSION="2.3"
+SINGULARITY_INSTALL_TEMP_DIR="/tmp/singularity"
 
-git clone https://github.com/gmkurtzer/singularity.git
-cd singularity
-./autogen.sh
+sudo apt-get -y install build-essential autoconf automake libtool debootstrap
+
+mkdir -p ${SINGULARITY_INSTALL_TEMP_DIR} && cd $_
+
+wget --no-check-certificate --content-disposition https://github.com/singularityware/singularity/releases/download/${SINGULARITY_VERSION}/singularity-${SINGULARITY_VERSION}.tar.gz
+tar xvzf singularity-${SINGULARITY_VERSION}.tar.gz
+rm -rf singularity-${SINGULARITY_VERSION}.tar.gz
+cd singularity-${SINGULARITY_VERSION}
 ./configure --prefix=/usr/local
 make
-sudo make install
+make install
+
+rm -rf ${SINGULARITY_INSTALL_TEMP_DIR}
 
